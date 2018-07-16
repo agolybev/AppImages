@@ -46,7 +46,7 @@ which cut >/dev/null 2>&1 || ( echo cut missing && exit 1 )
 if [ ! -f "${!#}" ] ; then
   YAMLFILE=/tmp/_recipe.yml
   rm -f "$YAMLFILE"
-  wget -q "https://github.com/AppImage/AppImages/raw/${PKG2AICOMMIT}/recipes/${!#}.yml" -O "$YAMLFILE"
+  wget -q "https://github.com/agolybev/AppImages/raw/${PKG2AICOMMIT}/recipes/${!#}.yml" -O "$YAMLFILE"
 else
   YAMLFILE=$(readlink -f "${!#}")
 fi
